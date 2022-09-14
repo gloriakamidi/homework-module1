@@ -220,7 +220,7 @@ form .textbox input {
 }
 form .button {
   text-align: right;
-  width: 400px;
+  width: 400px; 
 }
 
 form .button input {
