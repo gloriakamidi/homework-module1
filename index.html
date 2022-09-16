@@ -30,7 +30,8 @@
             <span>
                 Your Current Local Time:
             </span>
-            <span id="clock"></span>
+            <span id="clock"></span> 
+            
         </section>
      </div>
      
@@ -118,6 +119,14 @@
             document.getElementById("clock").innerText = time; //adding time
             //Run time data function every 1 second
             setInterval(currentTime, 1000); //setting timer
+
+           var utchr = d.getUTCHours(); //Get current Greenwich Mean Time (GMT)
+           var timeDiff; //To store time difference between GMT hour and Local hour
+           var adjTimeDiff; //To store time difference converted to poaitive number
+           var timeZone; //To store the 4 timr zones (PT,MT,CT,ET)
+
+           if 
+           
         }
         //Initial run of time data function
         currentTime();
