@@ -48,7 +48,7 @@
         </main> <!--End Main Content-->
         <section>
             <ul id="partners">
-                <li class="partner">
+               <!--  <li class="partner">
                     <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
                 </li>
                 <li class="partner">
@@ -65,7 +65,7 @@
                 </li>
                 <li class="partner">
                     <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
-                </li>   
+                </li> -->  
             </ul>
         </section>
         <!--Footer Information-->
@@ -125,7 +125,64 @@
            var adjTimeDiff; //To store time difference converted to poaitive number
            var timeZone; //To store the 4 timr zones (PT,MT,CT,ET)
 
-           if 
+           var utcOffset = d.getTimezoneOffset(); // Returns UTC offset in minutes
+           d.setMinutes(d.getMinutes() + utcOffset);
+           console,log("UTC: " +d);
+
+           // Paris -> +2 UTC
+            var parisOffset = 2+60;
+            d.setMInutes(d.getMinutes() + parisOffset);
+            console.log("Paris: " +d)
+
+          //Convert Greenwich time from military time to standard time
+          if (utchr > 12) {
+            utchr -= 12; 
+          } 
+          timeDiff = utchr - hr;
+          adjTimeDiff = Math.abs(timrDiff);
+
+          if(adjTimeDiff === 0){
+            timeZone = UTC;
+          } else if (adjTimeDiff === -5) {
+             timeZone = "ET";
+          } else if (adjTimeDiff === -6) {
+            timeZone = "CT";
+          } else if (adjTImeDiff === -7) {
+            timeZone = "MT";
+          } else if (adjTimeDiff === -8) {
+            timeZone = "PT";
+          } else {
+            timeZone = "";
+          } 
+          let text = d.toUTCString();
+          document.getElementById("demo").innerHTML = text; 
+
+
+          // Assemble time format to display
+          var time = hr + ":" + min + ":"+ sec + " " + ampm + " " + timeZone;
+
+          //Display current time format to display
+          document.getElementById("clock").innerText = time; //adding time 
+
+
+          // Images 
+        var photos = []; // empty array to store image element
+        var fileNames = []; // empty array to store image file names
+        var imageList = []; // empty array to store html list that contains an image
+        var image; // empty variable to store the assembled image list tag
+        var openList = "<li id='photo'>"; // variable to contain open list tag
+        var closeList = "</li>"; // to contain close  list tag 
+
+        // Create a loop to create 6 images starting with index of 0 
+        for (var i=0; i<6; i++) {
+          fileNames.push("partner"+ (i+1)); // Create mage file name and store in the array
+          photos.push("<img src='images/"+fileNames[i]+".jpg'>") // Assembel file  name into image element  and store it an array
+          image = openList + photos[i] + closeList; // Assemble  image element from array with list elements and store in a variable 
+          imageList.push(image); // Store(push) the assembled list codes into an array
+        } 
+          
+          
+
            
         }
         //Initial run of time data function
