@@ -48,24 +48,24 @@
         </main> <!--End Main Content-->
         <section>
             <ul id="partners">
-               <!--  <li class="partner">
-                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                 <!--<li class="partner">
+                    <img src="images/partners/partner1.png" alt="Partner Bus Tours">
                 </li>
                 <li class="partner">
-                   <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                   <img src="images/partners/partner2.png" alt="Partner Cabin Rental">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                    <img src="images/partners/partner3.png" alt="Partner Camping Adventure">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+                    <img src="images/partners/partner4.png" alt="Partner College Tours">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                    <img src="images/partners/partner5.png" alt="Partner Bike Rentals">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
-                </li> -->  
+                    <img src="images/partners/partner6.png" alt="Partner Tour Group">
+                </li>--> 
             </ul>
         </section>
         <!--Footer Information-->
@@ -75,9 +75,7 @@
                 <div class="social">
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                   
-                               
+                    <a href="#" class="fa fa-twitter"></a>             
                 </div>
             </div>
             <div id="disclaimer">
@@ -163,30 +161,36 @@
 
           //Display current time format to display
           document.getElementById("clock").innerText = time; //adding time 
-
-
-          // Images 
-        var photos = []; // empty array to store image element
-        var fileNames = []; // empty array to store image file names
-        var imageList = []; // empty array to store html list that contains an image
-        var image; // empty variable to store the assembled image list tag
-        var openList = "<li id='photo'>"; // variable to contain open list tag
-        var closeList = "</li>"; // to contain close  list tag 
-
-        // Create a loop to create 6 images starting with index of 0 
-        for (var i=0; i<6; i++) {
-          fileNames.push("partner"+ (i+1)); // Create mage file name and store in the array
-          photos.push("<img src='images/"+fileNames[i]+".jpg'>") // Assembel file  name into image element  and store it an array
-          image = openList + photos[i] + closeList; // Assemble  image element from array with list elements and store in a variable 
-          imageList.push(image); // Store(push) the assembled list codes into an array
-        } 
-          
+          }
+        //Initial run of time data function
+        currentTime();
+        
           
 
            
+        
+    </script>
+    <script>
+        // Images
+        var photos = [];
+        var fileNames = [];
+        var imageList = [];
+        var image;
+        var openList = "<li class='partner'>";
+        var closeList = "</li>"; 
+
+        // Create Loop
+        for (var i=0; i<6; i++) {
+            fileNames.push("partner"+ (i+1)); 
+            photos.push("<img src='images/partners/"+fileNames[i]+".png'>")
+            image = openList + photos[i] + closeList;
+            imageList.push(image);
         }
-        //Initial run of time data function
-        currentTime();
+        // Display all six images codes stored in the array
+        //document.getElementById("album").innerHTML = imageList;
+        document.getElementById("partners").innerHTML = imageList;
+
+          
     </script>
     </body>
 </html>

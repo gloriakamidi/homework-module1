@@ -89,23 +89,23 @@
         <section>
             <ul id="partners">
                <!--  <li class="partner">
-                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                    <img src="images/partners/partner1.png" alt="Partner Bus Tours">
                 </li>
                 <li class="partner">
-                   <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                   <img src="images/partners/partner2.png" alt="Partner Cabin Rental">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                    <img src="images/partners/partner3.png" alt="Partner Camping Adventure">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+                    <img src="images/partners/partner4.png" alt="Partner College Tours">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                    <img src="images/partners/partner5.png" alt="Partner Bike Rentals">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
-                </li> -->   
+                    <img src="images/partners/partner6.png" alt="Partner Tour Group">
+                </li>  
             </ul>
         </section>
         <!--Footer Information-->
@@ -115,11 +115,8 @@
                 <div class="social">
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                   
-                               
+                    <a href="#" class="fa fa-twitter"></a>             
                 </div>
-            </div>
             </div>
             <div id="disclaimer">
                 <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.
@@ -127,6 +124,26 @@
             </div>
         </footer>
     </div> <!--End Container-->
+    <script>
+        // Partner Images
+        var photos = [];
+        var fileNames = [];
+        var imageList = [];
+        var image;
+        var openList = "<li class='partner'>";
+        var closeList = "</li>"; 
+
+        // Create Loop
+        for (var i=0; i<6; i++) {
+            fileNames.push("partner"+ (i+1)); 
+            photos.push("<img src='images/partners/"+fileNames[i]+".png'>")
+            image = openList + photos[i] + closeList;
+            imageList.push(image);
+        }
+        // Display all six images codes stored in the array
+        //document.getElementById("album").innerHTML = imageList;
+        document.getElementById("partners").innerHTML = imageList;    
+    </script>
     </body>
 </html>
 
