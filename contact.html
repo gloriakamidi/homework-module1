@@ -89,6 +89,12 @@
             <div class="commentbox">
               <label>How did you hear about us:</label>
               <textarea></textarea>
+            </div> 
+            
+            <!--Random Codes-->
+            <div class="randomcode">
+              <input types="text" name="randomcode" placeholder="Enter characters">
+              <p id="codes"></p>
             </div>
 
             <div class="button">
@@ -140,27 +146,7 @@
       </footer>
     </div>
     <!--End Container-->
-    <script>
-        // Images
-        var photos = [];
-        var fileNames = [];
-        var imageList = [];
-        var image;
-        var openList = "<li class='partner'>";
-        var closeList = "</li>"; 
-
-        // Create Loop
-        for (var i=0; i<6; i++) {
-            fileNames.push("partner"+ (i+1)); 
-            photos.push("<img src='images/partners/"+fileNames[i]+".png'>")
-            image = openList + photos[i] + closeList;
-            imageList.push(image);
-        }
-        // Display all six images codes stored in the array
-        //document.getElementById("album").innerHTML = imageList;
-        document.getElementById("partners").innerHTML = imageList;
-
-          
-    </script>
+    <!-- Partners-->
+    <script src="js/site_script.js"></script>
   </body>
 </html>

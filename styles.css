@@ -225,7 +225,7 @@ form .button {
 
 form .button input {
   margin: 20px 0 10px 0;
-  background-color: #4288c3;
+  /*background-color: #4288c3;*/
   color: #fff;
   border: none;
   padding: 5px 15px;
