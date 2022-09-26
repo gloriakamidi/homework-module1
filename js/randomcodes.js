@@ -36,7 +36,13 @@ function generateCode() {
   codebox.addEventListener("input", evaluateCode);// listen to code entered in textbox
   // Run function if detected user had entered a character in the textbox
   function evaluateCode() {
-    getCode = docu
+    getCode = document.getElementById("codeentered").value; //get character entered
+    var charset1 = getCode.trim(); // remove any hidden characters entered
+    var charset2 = code.trim();// remove any hidden characters generated
+    // Test if code entered matches the number of generated characters
+    if (charset1.length == charset2.length && charset1 == charset2) {
+      disableButton(false); // if match, run the function to enable button
+    }
   }
   // Activate Function
   disableButton();
