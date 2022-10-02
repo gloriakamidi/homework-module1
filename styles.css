@@ -169,6 +169,7 @@ td {
   height: 75px;
   vertical-align: middle;
   border: solid 1px #852b1b;
+  /*background-color: #9ed034;*/
 }
 th:first-child {
   width: 125px;
@@ -180,6 +181,15 @@ td:first-child {
   font-weight: bold;
   background: #bde1ff;
 }
+.highlight {
+  color: white;
+  background: yellowgreen;
+  cursor: pointer;
+}  
+/*.none {
+  background-color: none;
+  cursor:
+}*/ 
 /* Contact */
 main p {
   color: grey;
