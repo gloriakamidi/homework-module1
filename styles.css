@@ -172,6 +172,8 @@ caption {
   font-size: 1.3em;
   font-weight: bold;
   padding-top: 0.5em;
+  text-align: center;
+  caption-side: top;
 }
 thead {
   background: #bde1ff;
@@ -286,7 +288,9 @@ figcaption {
   font-style: normal;
   padding: 10px;
   text-align: center;
+  
 } 
+
 /* css styling of clock*/
 #timeofday  {
   font-family: Arial, Helvetica, sans-serif;
