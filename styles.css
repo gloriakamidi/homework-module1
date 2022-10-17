@@ -340,6 +340,7 @@ Activate below when testing for media queries */
         text-align: center;
         float: none;
         font-size: 0.9em;
+       
       }
       footer #nondisclaimer .social {
         padding: 2.5em 0;
@@ -387,6 +388,6 @@ Activate below when testing for media queries */
 } 
 }
  #partners .partner img  {
-max-width: 100%;
+ width: 100%;
 }
 

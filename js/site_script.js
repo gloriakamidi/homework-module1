@@ -17,4 +17,12 @@ for (var i = 0; i < 6; i++) {
 //document.getElementById("album").innerHTML = imageList;
 document.getElementById("partners").innerHTML = imageList.join(" ");
 
-
+//To make Partner section responsive
+function myFunction() {
+  var x = document.getElementById("partners");
+  if (x.className === "partner") {
+    x.className += " responsive";
+  } else {
+    x.className = "partner";
+  }
+}
