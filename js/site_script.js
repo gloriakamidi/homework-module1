@@ -15,4 +15,6 @@ for (var i = 0; i < 6; i++) {
 }
 // Display all six images codes stored in the array
 //document.getElementById("album").innerHTML = imageList;
-document.getElementById("partners").innerHTML = imageList;
+document.getElementById("partners").innerHTML = imageList.join(" ");
+
+

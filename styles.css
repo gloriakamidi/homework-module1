@@ -260,6 +260,7 @@ form .button input {
   padding: 5px 15px;
   font-weight: bold;
   font-size: 1em;
+  
 }
 
 textarea {
@@ -385,7 +386,7 @@ Activate below when testing for media queries */
    
 } 
 }
-section #partners .partner img  {
+ #partners .partner img  {
 max-width: 100%;
 }
 

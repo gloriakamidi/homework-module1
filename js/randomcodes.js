@@ -22,12 +22,14 @@ function generateCode() {
   var btnvalue; // for button boolean value
   // Create variable to hold the type of characters we want to show as codes
   var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$";
-
+  
   //Disable button
   function disableButton(btnvalue) {
     document.getElementById("submit").disabled = btnvalue; // able/disable button
-    if (btnvalue == true) { // test if button is disabled or enabled
-      // Set button and label color translucent 
+    if (btnvalue == true) {
+      // test if button is disabled or enabled
+      // Set button and label color translucent
+      //$(".btn.danger").button("toggle").addClass("fat");
       document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
       document.getElementById("submit").style.color = "rgba(255, 255, 255, 0.5)";
     } else {
@@ -48,6 +50,8 @@ function generateCode() {
     if (charset1.length == charset2.length && charset1 == charset2) {
       disableButton(false); // if match, run the function to enable button
     }
+    
+    
   }
   // Activate Function
   disableButton();
